@@ -1,0 +1,524 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+  
+  html{
+    scroll-behavior: smooth;
+  }
+  
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  a:visited{
+    color: white;
+  }
+  
+  li{
+    list-style: none;
+  }
+  
+  #navbar{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(20px);
+  }
+  
+  #navbar > ul{
+    display: flex;
+  }
+  
+  #navbar > ul > li > a{
+    display: block;
+    font-size: 2rem;
+    padding: 1.5rem;
+  }
+  
+  #navbar > ul > li > a:hover{
+    transition: 1s;
+    color: black;
+    background-color: white;
+  }
+  
+  #welcome-section{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+      background-color: #000;
+      background-image: url(images/tech-background-image-1-1.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+  }
+  
+  #welcome-section > h1{
+    font-size: 4rem;
+    color: white;
+  }
+  
+  h1,h2{
+    font-family: "Raleway", "sans-serif";
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  #welcome-section > p{
+    padding: 10px;
+    font-size: 3rem;
+    font-weight: 200;
+    font-style: italic;
+    color: #9e1b32;
+  }
+  
+  #projects{
+    padding: 10rem 2rem;
+    text-align: center;
+    background-color: #5072A7;
+    background-size: cover;
+  }
+  
+  .projects-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+  }
+  
+  #projects > h2{
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+    font-size: 2.5rem;
+    color: white;
+    border-bottom: 0.3rem solid white;
+  }
+  
+  .btn{
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+  }
+
+  .btn-show-all{
+    font-size: 2rem;
+    background: #28282b;
+    transition: background  0.3s ease-out;
+  }
+
+  .btn-show-all:hover {
+    color: #ff7f50;
+  }
+
+  .btn-show-all:hover > i {
+    transform: translateX(2px);
+  }
+
+  .btn-show-all > i {
+    margin-left: 10px;
+    transform: translateX(0);
+    transition: transform 0.3s ease-out;
+  }
+  
+  .project{
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+  }
+
+  .project-tile{
+    background: #28282b;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    font-size: 1.25rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .project-tile:hover .code {
+    color: #ff7f50;
+  }
+
+  .code {
+    color: #28282b;
+    transition: color 0.3s ease-out;
+  }
+  
+  img{
+    display: block;
+  }
+
+  .project-image{
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;  
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+  }
+
+  #calculator-image{
+    background-image: url(images/calculadora.png)
+  }
+
+  #instagram-clone-image{
+    background-image: url(images/instagram-clone.png);
+  }
+
+  #menu-image{
+    background-image: url(images/menu.png);
+  }
+
+  #costs-image{
+    background-image: url(images/costs-image.png);
+  }
+
+  #hdc-host-image{
+    background-image: url(images/hdc-host.png);
+  }
+
+  #adventure-blog-image{
+    background-image: url(images/adventure-blog.png);
+  }
+  
+  #contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    padding: 0 2rem;
+    background-color: #000;
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%); 
+  }
+  
+  #contact > h2{
+    font-size: 4rem;
+    color: white;
+  }
+  
+  .contact-links{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+  }
+  
+  .contact-details{
+    font-size: 2.4rem;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .contact-details:hover{
+    color: #bfa251;
+    transform: translateY(8px);
+  }
+
+  .fa-github:before{
+      content: "\f09b";
+      margin: 10px;
+  }
+
+  .fa-twitter:before {
+    content: "\f099";
+    margin: 10px;
+  }
+
+  .fa-facebook-square:before {
+    content: "\f082";
+    margin: 10px;
+  }
+
+  .fa-instagram:before {
+    content: "\f082";
+    margin: 10px;
+  }
+  
+  .fa-linkedin:before {
+    content: "\f082";
+    margin: 10px;
+  }
+
+  .fa-chevron-right:before {
+    content: "\f054";
+  }
+
+  footer{
+    font-weight: 300;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+    background-color: #000;
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%); 
+    border-top: 4px solid #5072A7;
+  }
+  
+  footer > p{
+    color: white;
+  }
+
+  .fab{
+    font-family: "Font Awesome 5 Brands";
+  }
+
+
+/* Estilos para dispositivos com largura mínima de 1024px */
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+  #navbar > ul > li > a {
+    font-size: 2rem;
+    padding: 1.5rem 2rem;
+  }
+
+  #welcome-section > h1 {
+    font-size: 3.6rem;
+  }
+
+  #welcome-section > p {
+    font-size: 2.5rem;
+  }
+
+  #projects {
+    padding: 15rem 2rem; 
+  }
+
+  .projects-grid {
+    grid-gap: 6rem;
+  }
+
+  #projects > h2 {
+    font-size: 2.5rem;
+  }
+
+  
+  #contact > h2 {
+    font-size: 5rem;
+  }
+
+ 
+  footer {
+    padding: 4rem;
+  }
+}
+
+  
+  /* Media Query para Telas Menores (Tablets) */
+  @media screen and (max-width: 1023px) {
+    body {
+      font-size: 1.6rem;
+    }
+  
+    #navbar > ul > li > a {
+      font-size: 1.8rem;
+      padding: 1rem;
+    }
+  
+    #welcome-section > h1 {
+      font-size: 3rem;
+    }
+  
+    h1, h2 {
+      font-size: 2rem;
+    }
+  
+    #welcome-section > p {
+      font-size: 2rem;
+    }
+  
+    #projects {
+      padding: 5rem 1rem;
+    }
+  
+    #projects > h2 {
+      font-size: 3.2rem;
+      margin-bottom: 4rem;
+    }
+  
+    .btn {
+      font-size: 1.6rem;
+    }
+  
+    .project-tile {
+      font-size: 1.2rem;
+      padding: 0.8rem 0.4rem;
+    }
+  
+    #contact > h2 {
+      font-size: 3rem;
+    }
+  
+    .contact-details {
+      font-size: 1.5rem;
+    }
+  
+    footer {
+      padding: 1rem;
+    }
+  }
+  
+    /* Estilos para dispositivos com altura menor que 600px */
+  @media screen and (max-height: 599px) {
+    #navbar {
+      height: 2.5rem;
+    }
+  
+    #navbar > ul > li > a {
+      font-size: 1rem;
+      padding: 0.55rem;
+    }
+  
+    #welcome-section {
+        padding: 5rem 2rem;
+    }
+  
+    #welcome-section > h1 {
+      font-size: 3rem;
+    }
+  
+    #welcome-section > p {
+      font-size: 2rem; 
+    }
+  
+    #projects {
+      padding: 5rem 2rem;
+    }
+  
+    .projects-grid {
+      grid-gap: 3rem;
+    }
+  
+    #projects > h2 {
+      font-size: 2rem;
+    }
+  
+    #contact {
+      padding: 5rem 2rem;
+    }
+  
+    #contact > h2 {
+      font-size: 3rem;
+    }
+
+    .contact-details {
+      font-size: 1.3rem;
+    }
+  
+    footer {
+      padding: 2rem;
+    }
+  }
+
+   /* Estilos para dispositivos com largura máxima de 600px e altura menor que 600px*/
+  @media screen and (max-width: 600px) and (max-height: 599px){
+    #navbar {
+      height: 2.5rem;
+    }
+  
+    #welcome-section {
+      padding: 5rem 2rem;
+    }
+  
+    #welcome-section > h1 {
+      font-size: 3rem;
+    }
+  
+    #welcome-section > p {
+      font-size: 2rem;
+    }
+  
+    #projects {
+      padding: 5rem 2rem;
+    }
+  
+    .projects-grid {
+      grid-gap: 3rem;
+    }
+  
+    #projects > h2 {
+      font-size: 2rem;
+    }
+  
+    #contact {
+      padding: 5rem 2rem;
+    }
+  
+    #contact > h2 {
+      font-size: 3rem;
+    }
+  
+    footer {
+      padding: 2rem; 
+    }
+  }
+
+  /* Estilos para dispositivos com largura máxima de 600px */
+  @media screen and (max-width: 600px){
+    #navbar {
+      height: 3rem;
+    }
+
+    #navbar > ul > li > a {
+      font-size: 1.5rem;
+      padding: 0.48rem;
+    }
+  
+    #welcome-section {
+      padding: 5rem 2rem;
+    }
+  
+    #welcome-section > h1 {
+      font-size: 3rem;
+    }
+  
+    #welcome-section > p {
+      font-size: 2rem;
+    }
+  
+    #projects {
+      padding: 5rem 2rem;
+    }
+  
+    .projects-grid {
+      grid-gap: 3rem;
+    }
+  
+    #projects > h2 {
+      font-size: 2rem;
+    }
+  
+    #contact {
+      height: auto;
+      padding: 5rem 2rem;
+    }
+  
+    #contact > h2 {
+      font-size: 3rem;
+    }
+  
+    footer {
+      padding: 2rem; 
+    }
+  }
